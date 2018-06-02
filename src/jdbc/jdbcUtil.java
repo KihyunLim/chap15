@@ -30,4 +30,13 @@ public class jdbcUtil {
 			} catch (SQLException ex){}
 		}
 	}
+	
+	public static void rollback(Connection conn) {
+		if(conn != null) {
+			try {
+				conn.rollback();
+			} catch (SQLException e) {
+			}
+		}
+	}
 }
